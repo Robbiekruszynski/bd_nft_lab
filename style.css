@@ -29,13 +29,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: lightpink; */
   }
+
+  @keyframes bg-ani {
+    0% {background-position: right;}
+    100% {background-position: left;}
+}
   .card {
-    /* background-image: url("hypno.gif"); 
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-image: var(--gradient); */
+   
     background-position: center;
     transform-style: preserve-3d;
     min-height: 80vh;
@@ -43,21 +44,15 @@
     border-radius: 30px;
     padding: 0rem 5rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-    background-size: 100%;
+    /* background-size: 100%; */
     background-image: var(--gradient);
+    background-size: 400%;
 
-    /* animation: bg-animation 1s infinite alterntate; */
+    animation: bg-ani 10s infinite alternate;
   }
   
-  /* @keyframes bg-animation {
-    0% {
-      background-position: left;
-    }
-    100%{
-      background-position: right;
-    }
-  } */
-  
+
+
   .nft {
     min-height: 35vh;
     display: flex;
@@ -91,6 +86,11 @@
     display: flex;
     justify-content: center;
     transition: all 0.75s ease-out;
+    /* background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: bg-ani 1s infinite alternate; */
   }
   
   .size {
