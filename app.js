@@ -3,20 +3,18 @@
 const card = document.querySelector(".card");
 const container = document.querySelector(".container");
 
-//items
+
 const title = document.querySelector(".title");
 const nft = document.querySelector(".nft img");
-const purchase = document.querySelector(".purchase button");
+// const purchase = document.querySelector(".purchase button");
 const description = document.querySelector(".info h3");
-const size = document.querySelector(".size");
 
 //moving animation
 
 // (e) = event listener
-
 container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  let yAxis = (window.innerWidth / 2 - e.pageY) / 25;
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 15;
+  let yAxis = (window.innerWidth / 2 - e.pageY) / 20;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
@@ -28,7 +26,7 @@ container.addEventListener("mouseenter", (e) => {
 
   //item popout
   title.style.transform = "translateZ(150px)";
-  nft.style.transform = "translateZ(200px) rotateZ(-10deg)";
+  nft.style.transform = "translateZ(200px) rotateZ(-360deg)";
   title.style.transform = "translateZ(150px)";
   description.style.transform = "translateZ(125px)";
   purchase.style.transform = "translateZ(150px)";
